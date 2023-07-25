@@ -35,7 +35,7 @@ export default function App() {
 
         setNotes(oldNotes => {
             return [...oldNotes].sort((x, y) => {
-                return x.id === currentNoteId ? -1 : y.id == currentNoteId ? 1 : 0;
+                return x.id === currentNoteId ? -1 : y.id === currentNoteId ? 1 : 0;
             })
         })
     }
