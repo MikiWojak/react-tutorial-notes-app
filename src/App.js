@@ -1,6 +1,6 @@
 import React from "react"
-import Sidebar from "./components/Sidebar"
-import Editor from "./components/Editor"
+import Sidebar from "./components/layout/Sidebar"
+import Editor from "./components/elements/Editor"
 import { data } from "./data"
 import Split from "react-split"
 import {nanoid} from "nanoid"
