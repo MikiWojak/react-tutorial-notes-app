@@ -1,7 +1,7 @@
 import React from "react"
 import Sidebar from "./components/layout/Sidebar"
 import Editor from "./components/elements/Editor"
-import { data } from "./data"
+import { data } from "./data"   // @TODO Should I delete it?
 import Split from "react-split"
 import {nanoid} from "nanoid"
 
@@ -32,6 +32,12 @@ export default function App() {
                 ? { ...oldNote, body: text }
                 : oldNote
         }))
+
+        setNotes(oldNotes => {
+            return [...oldNotes].sort((x, y) => {
+                return x.id === currentNoteId ? -1 : y.id == currentNoteId ? 1 : 0;
+            })
+        })
     }
     
     function findCurrentNote() {
