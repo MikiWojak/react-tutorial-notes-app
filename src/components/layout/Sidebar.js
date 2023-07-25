@@ -2,9 +2,7 @@ import React from "react"
 
 export default function Sidebar(props) {
     const noteElements = props.notes.map((note, index) => {
-        const lines = JSON.stringify(note.body).split('\\n')
-        const [rawTitle] = lines
-        const title = rawTitle.replace(/[^a-zA-Z0-9 ]/g, '').trim()
+        const [title] = note.body.split('\n')
 
         return (
             <div key={note.id}>
