@@ -27,16 +27,15 @@ export default function App() {
     }
     
     function updateNote(text) {
-        setNotes(oldNotes => oldNotes.map(oldNote => {
-            return oldNote.id === currentNoteId
-                ? { ...oldNote, body: text }
-                : oldNote
-        }))
-
         setNotes(oldNotes => {
-            return [...oldNotes].sort((x, y) => {
-                return x.id === currentNoteId ? -1 : y.id === currentNoteId ? 1 : 0;
-            })
+            // @TODO New logic of moving edited note to the top
+            // Create a new empty array
+            // Loop over the original array
+                // If the id matches
+                    // put the updated note at the beginning of the new array
+                // else
+                    // push the old note to the end of the new array
+            // Return new array
         })
     }
     
