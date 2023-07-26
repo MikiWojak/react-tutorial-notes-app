@@ -55,7 +55,15 @@ export default function App() {
 
     function deleteNote(event, noteId) {
         event.stopPropagation()
-        // Your code here
+
+        const index = notes.findIndex(note => note.id === noteId)
+
+        setNotes(oldNotes => {
+            return  [
+                ...oldNotes.slice(0, index),
+                ...oldNotes.slice(index + 1)
+            ]
+        })
     }
     
     return (
@@ -73,6 +81,7 @@ export default function App() {
                     currentNote={findCurrentNote()}
                     setCurrentNoteId={setCurrentNoteId}
                     newNote={createNewNote}
+                    handleDeleteNote={deleteNote}
                 />
                 {
                     currentNoteId && 
