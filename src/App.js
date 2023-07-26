@@ -28,14 +28,22 @@ export default function App() {
     
     function updateNote(text) {
         setNotes(oldNotes => {
-            // @TODO New logic of moving edited note to the top
-            // Create a new empty array
-            // Loop over the original array
-                // If the id matches
-                    // put the updated note at the beginning of the new array
-                // else
-                    // push the old note to the end of the new array
-            // Return new array
+            const newArray = []
+
+            for (let i = 0; i < oldNotes.length; i++) {
+                const oldNote = oldNotes[i]
+
+                if (oldNote.id == currentNoteId) {
+                    newArray.unshift({
+                        ...oldNote,
+                        body: text
+                    })
+                } else {
+                    newArray.push(oldNote)
+                }
+            }
+
+            return newArray
         })
     }
     
