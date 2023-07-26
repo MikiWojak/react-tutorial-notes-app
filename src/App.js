@@ -52,6 +52,11 @@ export default function App() {
             return note.id === currentNoteId
         }) || notes[0]
     }
+
+    function deleteNote(event, noteId) {
+        event.stopPropagation()
+        // Your code here
+    }
     
     return (
         <main>
