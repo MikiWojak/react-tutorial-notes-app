@@ -1,7 +1,7 @@
 import React from "react"
 import Sidebar from "./components/layout/Sidebar"
 import Editor from "./components/elements/Editor"
-import { data } from "./data"   // @TODO Should I delete it?
+import { data } from "./data"
 import Split from "react-split"
 import {nanoid} from "nanoid"
 
