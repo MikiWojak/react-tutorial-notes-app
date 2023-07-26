@@ -20,7 +20,7 @@ export default function Sidebar(props) {
                             props.handleDeleteNote(event, note.id)
                         }
                     >
-                        <i className="gg-trash trash-icon"></i>
+                        <i className="gg-trash trash-icon" />
                     </button>
                 </div>
             </div>
