@@ -33,7 +33,7 @@ export default function App() {
             for (let i = 0; i < oldNotes.length; i++) {
                 const oldNote = oldNotes[i]
 
-                if (oldNote.id == currentNoteId) {
+                if (oldNote.id === currentNoteId) {
                     newArray.unshift({
                         ...oldNote,
                         body: text
